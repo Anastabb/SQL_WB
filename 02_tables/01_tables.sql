@@ -17,7 +17,8 @@ CREATE Table IF NOT EXISTS kunde
   (  
     k_id INT AUTO_INCREMENT PRIMARY KEY,  
     k_name VARCHAR(45),
-    k_age TINYINT
+    k_age TINYINT,
+    K_email VARCHAR(100) UNIQUE
   )    
 ;
 
@@ -27,11 +28,11 @@ SHOW TABLES;
 DESCRIBE kunde;
 
 # Datensätze / Zeilen
-INSERT INTO kunde(k_id,K_name,k_age) VALUES(DEFAULT,"Meier", 28);
-INSERT INTO kunde(k_id,K_name,k_age) VALUES(DEFAULT,"Hussein", 27);
-INSERT INTO kunde(k_id,K_name,k_age) VALUES(DEFAULT,"Li", 26);
-INSERT INTO kunde(k_id,K_name,k_age) VALUES(DEFAULT,"Li", 40);
-INSERT INTO kunde(k_id,K_name,k_age) VALUES(DEFAULT,"Li", 60);
+INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Meier", 28,"meier@web.de");
+INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Hussein", 27,"hussein@web.de");
+INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Li", 26,"li@web.de");
+INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Li", 40,"li2@web.de");
+INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Li", 60,"li3@web.de");
 
 
 # Tabellendaten (Inhalte anzeigen)
