@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS kunde;
 CREATE Table IF NOT EXISTS kunde 
   (  
     k_id INT AUTO_INCREMENT PRIMARY KEY,  
-    k_name VARCHAR(45),
+    k_name VARCHAR(45) NOT NULL DEFAULT "TBA",
     k_age TINYINT,
     K_email VARCHAR(100) UNIQUE
   )    
@@ -34,6 +34,8 @@ INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Li", 26,"li@web.de"
 INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Li", 40,"li2@web.de");
 INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,"Li", 60,"li3@web.de");
 
+INSERT INTO kunde(k_id,K_name,k_age,k_email) VALUES(DEFAULT,null,null,null);
+INSERT INTO kunde() VALUES ();
 
 # Tabellendaten (Inhalte anzeigen)
 SELECT *FROM kunde;
